@@ -1,0 +1,19 @@
+{
+  "name": "httpersonal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wachka06/httpersonal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wachka06/httpersonal/issues"
+  },
+  "homepage": "https://github.com/wachka06/httpersonal#readme"
+}
