@@ -1,4 +1,6 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   entry: './client/index.js',
@@ -7,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
   },
   mode: process.env.NODE_ENV,
+  plugins: [new MiniCssExtractPlugin()],
   module: {
       rules: [
           {
@@ -22,7 +25,7 @@ module.exports = {
           {
               test: /\.(sa|sc|c)ss$/,
               use: [
-                  'style-loader',
+                  devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
                   'css-loader',
                   'sass-loader',
               ]
@@ -36,7 +39,7 @@ module.exports = {
   devServer: {
       hot: true,
       publicPath: '/build/',
-    //   port: 8080,
+      // port: 8080,
       proxy: {
         'api/*': 'http://localhost:3000',
         // 'api/status_code': 'http://localhost:3000',
