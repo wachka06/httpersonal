@@ -1,0 +1,222 @@
+body {
+  background: $black;
+  font-family: 'Lato', sans-serif;
+  margin: 2% 13%;
+}
+
+header {
+  display: flex;
+  margin-bottom: 50px;
+
+  img {
+    width: 90px;
+    animation: rotation 7s infinite linear;
+  }
+  h1 {
+      color: $red;
+      letter-spacing: 4.4px;
+      font-weight: 900;
+      margin-left: 18px;
+  }
+  button {
+    background: $black;
+    border: 0;
+    color: $red;
+    font-size: xxx-large;
+    margin-left: auto;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+}
+
+.delete-message {
+  width: 100%;
+  color: $red;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  img {
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  
+  p {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  p:first-of-type {
+    margin-bottom: 40px;
+  }
+
+  button {
+    border-radius: 10px;
+    margin: 30px;
+    height: 48px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  button:first-of-type {
+    background: $red;
+    border: 0;
+    color: $white;
+    margin-top: 70px;
+  }
+
+  button:last-of-type {
+    background: $black;
+    border: solid 3px $red;
+    color: $red;
+  }
+}
+
+.form-wrapper {
+  z-index: 2;
+  width: 100%;
+  height: 60%;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 0;
+    width: 480px;
+
+    h1 {
+      color: $red;
+      letter-spacing: 3px;
+      margin-bottom: 70px;
+      text-align: center;
+    }
+
+    label {
+        color: $white;
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+    }
+
+    input {
+      border: 0;
+      border-radius: 10px;
+      height: 36px;
+      margin-bottom: 34px;
+      padding: 0 20px;
+
+      &:hover {
+        border: solid 3px $red;
+      }
+    }
+
+    input:last-child {
+      background: $black;
+      border: solid 3px $red;
+      color: $red;
+      margin: 40px 0;
+      height: 48px;
+      font-size: 20px;
+      letter-spacing: 2px;
+      font-weight: 900;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section {
+  margin: 1rem;
+  width: 26%;
+  height: 400px;
+  position: relative;
+//   transition: opacity 1s;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  .delete-button {
+    position: absolute;
+    right: 0;
+    border: 0;
+    background: $white;
+    color: $red;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.2;
+    font-size: 30px;
+    padding-bottom: 4px;
+  }
+
+  .image-wrapper {
+    display: flex;
+    height: 287px;
+    // align-items: flex-end;
+
+    img {
+        border-radius: 10px 10px 0 0;
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+        max-height: 287px;
+    }
+  }
+  .status_details {
+    background: $red;
+    border-radius: 0 0 10px 10px;
+    color: $white;
+    padding: 1rem 1rem 0;
+    height: 100px;
+
+    p {
+        margin: 0;
+    }
+    
+    p:nth-child(1) {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        padding-bottom: 1rem;
+        text-transform: uppercase;
+    }
+    p:nth-child(2) {
+        flex: 1 1 auto;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+  }
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
